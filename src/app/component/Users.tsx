@@ -46,10 +46,10 @@ const Users = () => {
                     <>
                       <div
                         key={data.id}
-                        className="bg-[#3434347a]  rounded-[55px]"
+                        className="bg-[#3434347a] hover:bg-transparent duration-300  rounded-[55px] relative group"
                       >
-                        <div className="bg-gradient-to-l from-[#868686] to-black/0 rounded-[55px] p-px">
-                          <div className="rounded-[55px] p-1.5 flex items-center gap-x-3.5 bg-black">
+                        <div className=" border border-gradient-to-l from-[#868686] to-black/0 rounded-[55px] p-px z-20 duration-300 group-hover:relative group-hover:bg-primary/50">
+                          <div className="rounded-[55px] p-1.5 flex items-center gap-x-3.5 duration-300 bg-black group-hover:bg-primary/10">
                             <Image
                               src={data.avatar}
                               alt={data.userName}
@@ -57,6 +57,14 @@ const Users = () => {
                               height={64}
                             />
                             <h6 className="user-block-text">{data.userName}</h6>
+                          </div>
+                        </div>
+                        {/* Hover Block */}
+                        <div className="absolute -inset-4 -top-4 z-10">
+                          <div className="relative inset-0 rounded-2xl p-4 pb-6">
+                            <div className="border border-[#343434] rounded-2xl absolute"></div>
+                            {/* User Name block */}
+                            <div className=""></div>
                           </div>
                         </div>
                       </div>
