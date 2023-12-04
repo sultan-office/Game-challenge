@@ -1,0 +1,112 @@
+[
+  {
+    "id": 0,
+    "avatar": "/images/users/avatar-01.png",
+    "userName": "MonkeyIslander872",
+    "playerMetaData": {
+      "playerName": "JohnDoe123",
+      "gamingPlatform": "PC",
+      "gameLevel": 25,
+      "achievements": ["Master of the Arena", "Legendary Explorer"],
+      "totalScore": 2000,
+      "preferredGameMode": "Team Deathmatch",
+      "collectedItems": {
+        "weapon": "Legendary Sword",
+        "armor": "Epic Plate Armor",
+        "pet": "Fire Dragon"
+      }
+    }
+  },
+
+  {
+    "id": 1,
+    "avatar": "/images/users/avatar-01.png",
+    "userName": "MonkeyIslander872",
+    "playerMetaData": {
+      "playerName": "JohnDoe123",
+      "gamingPlatform": "PC",
+      "gameLevel": 25,
+      "achievements": ["Master of the Arena", "Legendary Explorer"],
+      "totalScore": 2000,
+      "preferredGameMode": "Team Deathmatch",
+      "collectedItems": {
+        "weapon": "Legendary Sword",
+        "armor": "Epic Plate Armor",
+        "pet": "Fire Dragon"
+      }
+    }
+  },
+
+  {
+    "id": 2,
+    "avatar": "/images/users/avatar-01.png",
+    "userName": "MonkeyIslander872",
+    "playerMetaData": {
+      "playerName": "JohnDoe123",
+      "gamingPlatform": "PC",
+      "gameLevel": 25,
+      "achievements": ["Master of the Arena", "Legendary Explorer"],
+      "totalScore": 2000,
+      "preferredGameMode": "Team Deathmatch",
+      "collectedItems": {
+        "weapon": "Legendary Sword",
+        "armor": "Epic Plate Armor",
+        "pet": "Fire Dragon"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "avatar": "/images/users/avatar-01.png",
+    "userName": "MonkeyIslander872",
+    "playerMetaData": {
+      "playerName": "JohnDoe123",
+      "gamingPlatform": "PC",
+      "gameLevel": 25,
+      "achievements": ["Master of the Arena", "Legendary Explorer"],
+      "totalScore": 2000,
+      "preferredGameMode": "Team Deathmatch",
+      "collectedItems": {
+        "weapon": "Legendary Sword",
+        "armor": "Epic Plate Armor",
+        "pet": "Fire Dragon"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "avatar": "/images/users/avatar-01.png",
+    "userName": "MonkeyIslander872",
+    "playerMetaData": {
+      "playerName": "JohnDoe123",
+      "gamingPlatform": "PC",
+      "gameLevel": 25,
+      "achievements": ["Master of the Arena", "Legendary Explorer"],
+      "totalScore": 2000,
+      "preferredGameMode": "Team Deathmatch",
+      "collectedItems": {
+        "weapon": "Legendary Sword",
+        "armor": "Epic Plate Armor",
+        "pet": "Fire Dragon"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "avatar": "/images/users/avatar-01.png",
+    "userName": "MonkeyIslander872",
+    "playerMetaData": {
+      "playerName": "JohnDoe123",
+      "gamingPlatform": "PC",
+      "gameLevel": 25,
+      "achievements": ["Master of the Arena", "Legendary Explorer"],
+      "totalScore": 2000,
+      "preferredGameMode": "Team Deathmatch",
+      "collectedItems": {
+        "weapon": "Legendary Sword",
+        "armor": "Epic Plate Armor",
+        "pet": "Fire Dragon"
+      }
+    }
+  }
+]
