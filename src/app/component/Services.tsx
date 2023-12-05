@@ -75,7 +75,7 @@ const Services = () => {
           alt="bubble-shape"
           width={151}
           height={245}
-          className="w-auto h-auto left-0 top-[120px]"
+          className="w-auto h-auto left-0 top-[120px] absolute"
         />
       </section>
     </>

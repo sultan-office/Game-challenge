@@ -33,6 +33,7 @@ const config: Config = {
       fontFamily: {
         lexend: "var(--font-lexend)",
         integralCf: "var(--font-integralCf)",
+        robotoMono: "var(--font-robotoMono)",
       },
 
       colors: {

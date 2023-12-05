@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { Lexend } from "next/font/google";
+import { Lexend, Roboto_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
 const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" });
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  variable: "--font-robotoMono",
+  weight: ["500"],
+});
 const integralCf = localFont({
   src: "../../public/font/integralcf-regular.woff",
   display: "swap",
@@ -21,7 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${lexend.variable} ${integralCf.variable}`}>
+    <html
+      lang="en"
+      className={`${lexend.variable} ${integralCf.variable} ${robotoMono.variable}`}
+    >
       <body className="font-lexend bg-black">
         <main>{children}</main>
       </body>

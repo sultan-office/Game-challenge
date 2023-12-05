@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+@layer components {
   .text-gray-liner {
     background: linear-gradient(90deg, #ababab 0%, #2d2d2d 102.73%);
     background-clip: text;
@@ -10,12 +10,6 @@
     -webkit-text-fill-color: transparent;
   }
 
-  .user-block-text {
-    background: linear-gradient(90deg, #2d2d2d 0%, #ababab 102.73%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
   .text-red-gray-linear {
     background: #eb3a4a;
     background: radial-gradient(
@@ -26,7 +20,9 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
 
+@layer utilities {
   .hero-pill-bg {
     background: linear-gradient(93deg, #868686 -1.74%, rgba(0, 0, 0, 0) 78.61%),
       rgba(52, 52, 52, 0.5);
