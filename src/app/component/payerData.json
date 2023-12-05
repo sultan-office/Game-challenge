@@ -20,8 +20,8 @@
 
   {
     "id": 1,
-    "avatar": "/images/users/avatar-01.png",
-    "userName": "MonkeyIslander872",
+    "avatar": "/images/users/avatar-02.png",
+    "userName": "mean_deal_",
     "playerMetaData": {
       "playerName": "JohnDoe123",
       "gamingPlatform": "PC",
@@ -39,8 +39,8 @@
 
   {
     "id": 2,
-    "avatar": "/images/users/avatar-01.png",
-    "userName": "MonkeyIslander872",
+    "avatar": "/images/users/avatar-03.png",
+    "userName": "TennisChallenger",
     "playerMetaData": {
       "playerName": "JohnDoe123",
       "gamingPlatform": "PC",
@@ -57,8 +57,8 @@
   },
   {
     "id": 3,
-    "avatar": "/images/users/avatar-01.png",
-    "userName": "MonkeyIslander872",
+    "avatar": "/images/users/avatar-04.png",
+    "userName": "DoozieWoozie",
     "playerMetaData": {
       "playerName": "JohnDoe123",
       "gamingPlatform": "PC",
@@ -75,8 +75,8 @@
   },
   {
     "id": 4,
-    "avatar": "/images/users/avatar-01.png",
-    "userName": "MonkeyIslander872",
+    "avatar": "/images/users/avatar-05.png",
+    "userName": "tired0fbeIngWired",
     "playerMetaData": {
       "playerName": "JohnDoe123",
       "gamingPlatform": "PC",
@@ -93,8 +93,8 @@
   },
   {
     "id": 5,
-    "avatar": "/images/users/avatar-01.png",
-    "userName": "MonkeyIslander872",
+    "avatar": "/images/users/avatar-06.png",
+    "userName": "Greendragon_",
     "playerMetaData": {
       "playerName": "JohnDoe123",
       "gamingPlatform": "PC",

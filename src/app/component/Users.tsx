@@ -46,28 +46,42 @@ const Users = () => {
                     <>
                       <div
                         key={data.id}
-                        className="bg-transparent relative group z-0 hover:z-10"
+                        className="bg-transparent relative group"
                       >
-                        <div className="rounded-[55px] group-hover:z-20 relative duration-300 border border-[#343434] group-hover:border-primary/50 group-hover:after:opacity-0 after:duration-300 after:block after:absolute after:-inset-px after:rounded-[55px] after:z-[-1] after:bg-gradient-to-l after:from-[#868686] after:to-black/0">
-                          <div className="rounded-[55px] p-2 flex items-center duration-300 gap-x-3.5 bg-black group-hover:bg-primary/10">
+                        <div className="rounded-[55px] group-hover:hidden relative duration-300 border border-[#343434] after:duration-300 after:block after:absolute after:-inset-px after:rounded-[55px] after:z-[-1] after:bg-gradient-to-l after:from-[#868686] after:to-black/0">
+                          <div className="rounded-[55px] p-2 flex items-center duration-300 gap-x-3.5 bg-black">
                             <Image
                               src={data.avatar}
                               alt={data.userName}
                               width={64}
                               height={64}
                             />
-                            <h6 className="bg-clip-text text-transparent bg-gradient-to-r duration-300 from-[#2D2D2D] to-[#ABABAB] group-hover:from-primary group-hover:to-primary">
+                            <h6 className="bg-clip-text text-transparent bg-gradient-to-r duration-300 from-[#2D2D2D] to-[#ABABAB]">
                               {data.userName}
                             </h6>
                           </div>
                         </div>
                         {/* Hover Block */}
 
-                        <div className="opacity-0 duration-300 invisible group-hover:opacity-100  group-hover:visible absolute group-odd:-left-4 group-even:-right-4 -inset-y-4 w-[624px] z-10">
+                        <div className="opacity-0 duration-300 invisible group-hover:opacity-100  group-hover:visible absolute group-odd:-left-4 group-even:-right-4 -inset-y-4 w-[624px] z-20">
                           <div className="relative inset-0 rounded-2xl">
                             <div className="border border-[#343434] rounded-2xl absolute inset-0 backdrop-blur-[10px] bg-black/80 z-[-1]"></div>
+                            {/* Header Section */}
+                            <div className="grid pt-4 px-4 grid-cols-2 gap-x-6">
+                              <div className="rounded-[55px] p-2 flex items-center duration-300 gap-x-3.5 border border-primary/50 bg-primary/10">
+                                <Image
+                                  src={data.avatar}
+                                  alt={data.userName}
+                                  width={64}
+                                  height={64}
+                                />
+                                <h6 className="text-primary">
+                                  {data.userName}
+                                </h6>
+                              </div>
+                            </div>
                             {/* User Name block */}
-                            <div className="pt-[120px] p-6">
+                            <div className="p-6">
                               <code className="text-white text-sm font-medium font-robotoMono leading-5">
                                 <p className="text-[#F0F0F0]">
                                   player_metadata = &#123;

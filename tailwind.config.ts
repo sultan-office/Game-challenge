@@ -45,6 +45,22 @@ const config: Config = {
       backgroundImage: {
         heroBg: `url("../../public/images/hero/hero-bg.png")`,
       },
+
+      keyframes: {
+        round: {
+          "0%": { transform: "rotateZ(0deg)" },
+          "100%": { transform: "rotateZ(360deg)" },
+        },
+        heroPil: {
+          "0%": { transform: "translateX(-1000%)", opacity: "0" },
+          "100%": { transform: "translateX(1000%)", opacity: "1" },
+        },
+      },
+
+      animation: {
+        round: "round 3s linear infinite",
+        herPill: "heroPil 5s infinite ease-in-out",
+      },
     },
   },
 };

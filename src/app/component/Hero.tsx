@@ -1,10 +1,26 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [first, setfirst] = useState({});
+
+  const handleMouseMove = (event: any) => {
+    console.log({
+      moveX: event.movementX,
+      moveY: event.movementY,
+    });
+  };
+
   return (
     <>
-      <section className="bg-heroBg bg-no-repeat">
+      <section
+        className="bg-heroBg bg-no-repeat"
+        id="hero"
+        onMouseMove={handleMouseMove}
+      >
         <div className="container">
           <div className="flex">
             <div className="w-7/12">
@@ -70,10 +86,20 @@ const Hero = () => {
                       src="/images/hero/lock.svg"
                       alt="lock"
                       loading="lazy"
-                      width={48}
+                      width={60}
                       height={48}
                       className="mx-auto"
                     />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 mx-auto">
+                      <Image
+                        src="/images/hero/lock-ring.svg"
+                        alt="Lock Ring"
+                        loading="lazy"
+                        width={48}
+                        height={48}
+                        className="animate-round"
+                      />
+                    </div>
                   </div>
                   <div className="grid grid-cols-2 justify-center gap-2 w-[402px]  bottom-0 right-[102px] mx-auto">
                     {/* #868686, #00000000 */}
@@ -84,9 +110,11 @@ const Hero = () => {
                     ].map((title: string, index: number) => {
                       return (
                         <div key={index} className="first:col-span-2">
-                          <div className="hero-pill-bg  rounded-[360px] p-px w-fit mx-auto overflow-hidden">
-                            <div className="px-5 py-[15px] rounded-[360px] w-fit mx-auto bg-black">
-                              <span className="text-gray-liner text-sm">
+                          <div className="border p-px border-[#343434] rounded-[360px] w-fit mx-auto overflow-hidden relative z-[1]">
+                            <span className="h-0.5 block w-10 bg-gradient-to-r from-black/0 via-[#b9b9b9]  to-black/0 absolute -top-px left-1/2 opacity-0 animate-herPill delay-[2000ms]"></span>
+                            <div className="rounded-[360px] absolute -inset-px z-[-1] bg-gradient-to-r from-[#868686] to-black/0"></div>
+                            <div className="px-5 py-[15px] bg-black rounded-[360px]">
+                              <span className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-[#ABABAB] to-[#2D2D2D]">
                                 {title}
                               </span>
                             </div>
@@ -101,7 +129,7 @@ const Hero = () => {
           </div>
           <div className="flex justify-center mt-[78px]">
             <button>
-              <span className="block pb-[3px] text-red-gray-linear font-integralCf">
+              <span className="block pb-[3px] font-integralCf bg-clip-text text-transparent bg-gradient-to-r from-[#2B2B2B] via-primary to-[#2B2B2B]">
                 Scroll down
               </span>
               <span className="inline-block mx-auto animate-bounce">
