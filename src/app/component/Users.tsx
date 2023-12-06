@@ -1,5 +1,7 @@
+"use client"
 import Image from "next/image";
 import playerData from "./payerData.json";
+import TitleAnimation from "./TitleAnimation";
 
 type playerDataType = {
   id: number;
@@ -25,13 +27,13 @@ const Users = () => {
     <>
       <section className="pt-20 pb-[160px] relative z-[1]">
         <div className="container">
-          <div className="flex">
-            <div className="w-1/2">
+          <div className="xl:flex">
+            <div className="xl:w-1/2">
               <div>
-                <h2 className="text-light font-integralCf text-[40px] leading-[48px] mb-8 max-w-[370px]">
-                  The New Gaming Web
+                <h2 className="text-light font-integralCf text-[40px] leading-[48px] mb-8 xl:max-w-[370px] animate-up">
+                  <TitleAnimation title="The New Gaming Web" />
                 </h2>
-                <p className="text-lightGray text-sm font-light leading-5 max-w-[387px]">
+                <p className="text-lightGray text-sm font-light leading-5 xl:max-w-[387px] animate-up">
                   At the core of the XBorg Data Graph Protocol lies a dynamic
                   and interconnected network of gaming profiles. Each
                   player&#39;s profile is represented as a unique ERC-721 NFT,
@@ -39,14 +41,15 @@ const Users = () => {
                 </p>
               </div>
             </div>
-            <div className="w-1/2">
-              <div className="grid grid-cols-2 gap-6">
-                {playerData.map((data: playerDataType) => {
+            <div className="xl:w-1/2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 xl:mt-0">
+                {playerData.map((data: playerDataType, index) => {
                   return (
                     <>
                       <div
                         key={data.id}
-                        className="bg-transparent relative group"
+                        className="bg-transparent relative group animate-up"
+                        style={{ animationDelay: `${(index + 1) * 50}ms` }}
                       >
                         <div className="rounded-[55px] group-hover:hidden relative duration-300 border border-[#343434] after:duration-300 after:block after:absolute after:-inset-px after:rounded-[55px] after:z-[-1] after:bg-gradient-to-l after:from-[#868686] after:to-black/0">
                           <div className="rounded-[55px] p-2 flex items-center duration-300 gap-x-3.5 bg-black">
@@ -63,11 +66,11 @@ const Users = () => {
                         </div>
                         {/* Hover Block */}
 
-                        <div className="opacity-0 duration-300 invisible group-hover:opacity-100  group-hover:visible absolute group-odd:-left-4 group-even:-right-4 -inset-y-4 w-[624px] z-20">
+                        <div className="opacity-0 duration-300 invisible group-hover:opacity-100  group-hover:visible absolute left-0 right-0 sm:left-[inherit] sm:right-[inherit] sm:group-odd:-left-4 sm:group-even:-right-4 -inset-y-4  sm:w-[624px] z-20">
                           <div className="relative inset-0 rounded-2xl">
                             <div className="border border-[#343434] rounded-2xl absolute inset-0 backdrop-blur-[10px] bg-black/80 z-[-1]"></div>
                             {/* Header Section */}
-                            <div className="grid pt-4 px-4 grid-cols-2 gap-x-6">
+                            <div className="grid pt-4 px-4 grid-cols-1 sm:grid-cols-2 gap-x-6">
                               <div className="rounded-[55px] p-2 flex items-center duration-300 gap-x-3.5 border border-primary/50 bg-primary/10">
                                 <Image
                                   src={data.avatar}

@@ -43,7 +43,8 @@ const config: Config = {
       },
 
       backgroundImage: {
-        heroBg: `url("../../public/images/hero/hero-bg.png")`,
+        heroBg: `url("/images/hero/hero-bg.png")`,
+
       },
 
       keyframes: {
@@ -55,11 +56,17 @@ const config: Config = {
           "0%": { transform: "translateX(-1000%)", opacity: "0" },
           "100%": { transform: "translateX(1000%)", opacity: "1" },
         },
+
+        up: {
+          "0%": { transform: "translateY(100px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
       },
 
       animation: {
         round: "round 3s linear infinite",
         herPill: "heroPil 5s infinite ease-in-out",
+        up: "up 1s ease-in-out",
       },
     },
   },

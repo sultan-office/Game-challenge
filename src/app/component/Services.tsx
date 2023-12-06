@@ -1,5 +1,8 @@
-import React from "react";
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+import TitleAnimation from "./TitleAnimation";
 
 type cardDataType = {
   id: number | string;
@@ -26,11 +29,11 @@ const cardData: cardDataType[] = [
 const Services = () => {
   return (
     <>
-      <section className="pt-[120px] pb-20 relative">
+      <section className="md:pt-[120px] pb-12 md:pb-20 relative z-10">
         <div className="container">
           <div>
-            <h2 className="text-[64px] leading-[64px] font-integralCf text-lightGray max-w-[770px] text-center mx-auto">
-              The value network of gaming
+            <h2 className="text-5xl lg:text-[64px] leading-none font-integralCf text-lightGray max-w-[770px] text-center mx-auto">
+              <TitleAnimation title="The value network of gaming" />
             </h2>
             <p className="text-sm leading-5 text-lightGray text-center max-w-[520px] mx-auto mt-6">
               The fundamental protocol that allows anyone to create gaming
@@ -38,13 +41,13 @@ const Services = () => {
             </p>
           </div>
           <div className="mt-14">
-            <div className="w-8/12 mx-auto">
-              <div className="grid grid-cols-2 gap-x-6">
+            <div className="lg:w-8/12 mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[...cardData].map((data: cardDataType) => {
                   return (
                     <div
                       key={data.id}
-                      className="border border-[#343434] rounded-2xl p-6"
+                      className="border border-[#343434] rounded-2xl p-6 hover:-translate-y-5 duration-300"
                     >
                       <div>
                         <h3 className="text-2xl leading-8 text-light mb-4">
@@ -70,13 +73,21 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <Image
-          src="/images/services/services-shape-img.png"
-          alt="bubble-shape"
-          width={151}
-          height={245}
-          className="w-auto h-auto left-0 top-[120px] absolute"
-        />
+        <motion.div
+          initial={{ top: "400px" }}
+          whileInView={{ top: "120px" }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="left-0 top-[120px] absolute z-[-1]"
+        >
+          <Image
+            src="/images/services/services-shape-img.png"
+            alt="bubble-shape"
+            width={151}
+            height={245}
+            className="w-auto h-auto"
+          />
+        </motion.div>
       </section>
     </>
   );

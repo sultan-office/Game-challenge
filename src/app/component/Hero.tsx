@@ -2,69 +2,61 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import TitleAnimation from "./TitleAnimation";
 
 const Hero = () => {
-  const [first, setfirst] = useState({});
 
-  const handleMouseMove = (event: any) => {
-    console.log({
-      moveX: event.movementX,
-      moveY: event.movementY,
-    });
-  };
 
   return (
     <>
       <section
-        className="bg-heroBg bg-no-repeat"
+        className="lg:bg-heroBg bg-no-repeat overflow-x-hidden"
         id="hero"
-        onMouseMove={handleMouseMove}
       >
         <div className="container">
-          <div className="flex">
-            <div className="w-7/12">
-              <div className="pt-[203px] relative z-10">
-                <h3 className="leading-auto text-primary text-xs uppercase font-medium">
-                  Lorem ipsum dolor{" "}
+          <div className="xl:flex">
+            <div className="lg:w-9/12 xl:w-7/12">
+              <div className="pt-14 lg:pt-[203px] relative z-10">
+                <h3 className="leading-auto text-primary text-xs uppercase font-medium animate-up delay-100">
+                  <TitleAnimation title="Lorem ipsum dolor" />
                 </h3>
-                <h1 className="text-light font-integralCf text-[64px] leading-[64px] uppercase mb-6 mt-[12px]">
-                  Game-changing infrastructure
+                <h1 className="text-light font-integralCf lg:text-[64px] text-5xl leading-none uppercase mb-6 mt-6 lg:mt-[12px]">
+                  <TitleAnimation title="Game-changing infrastructure" />
                 </h1>
-                <p className="text-sm text-lightGray font-light leading-5 max-w-[496px]">
+                <p className="text-sm text-lightGray font-light leading-5 max-w-[496px] animate-up delay-200">
                   A decentralised, non-custodial social graph, empowering
                   players to take full ownership of their gaming identities and
                   enabling developers to build next-gen applications.
                 </p>
-                <div className="mt-16">
+                <div className="mt-14 lg:mt-16 animate-up delay-300">
                   <Link
                     href="/"
-                    className="bg-primary rounded-lg text-base leading-6 py-4 px-[35px] text-light"
+                    className="bg-primary rounded-lg text-base leading-6 py-4 px-[35px] inline-block text-light hover:-translate-y-1 duration-300"
                   >
                     Join Discord
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="w-5/12">
-              <div className="relative pt-[118px] z-[1]">
+            <div className="xl:w-5/12">
+              <div className="relative pt-12 md:pt-[118px] z-[1]">
                 <Image
                   src="/images/hero/x-shape.svg"
                   alt="shape-image"
                   width={477}
                   height={507}
-                  className="w-auto left-[54px]"
+                  className="max-w-full xl:w-auto mx-auto xl:left-[54px]"
                 />
                 <Image
                   src="/images/hero/hero-image.png"
                   width={870}
                   height={489}
                   alt="hero-image"
-                  className="max-w-[unset] absolute top-[33px] right-[-160px] -z-[1]"
+                  className={`w-[700px] md:w-auto max-w-[unset] absolute -top-4 md:top-[33px] right-1/2 translate-x-1/2 xl:translate-x-0 xl:right-[-160px] -z-[1] duration-700`}
                 />
 
                 {/* User Info */}
-                <div className="user-info absolute top-[291px] left-[192px] z-10">
+                <div className="user-info absolute top-[140px] sm:top-[200px] md:top-[291px] left-1/2 -translate-x-1/2 xl:translate-x-0 xl:left-[192px] z-10">
                   <Image
                     src="/images/hero/avatar.png"
                     alt="User-id: XBorg001"
@@ -110,7 +102,10 @@ const Hero = () => {
                     ].map((title: string, index: number) => {
                       return (
                         <div key={index} className="first:col-span-2">
-                          <div className="border p-px border-[#343434] rounded-[360px] w-fit mx-auto overflow-hidden relative z-[1]">
+                          <div
+                            className="border p-px border-[#343434] rounded-[360px] w-fit mx-auto overflow-hidden relative z-[1] animate-up"
+                            style={{ animationDelay: `${(index + 1) * 200}ms` }}
+                          >
                             <span className="h-0.5 block w-10 bg-gradient-to-r from-black/0 via-[#b9b9b9]  to-black/0 absolute -top-px left-1/2 opacity-0 animate-herPill delay-[2000ms]"></span>
                             <div className="rounded-[360px] absolute -inset-px z-[-1] bg-gradient-to-r from-[#868686] to-black/0"></div>
                             <div className="px-5 py-[15px] bg-black rounded-[360px]">
@@ -154,9 +149,9 @@ const Hero = () => {
                       width="21.2069"
                       height="13.9222"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
